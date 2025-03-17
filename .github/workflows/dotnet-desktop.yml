@@ -20,7 +20,7 @@ jobs:
       uses: NuGet/setup-nuget@v2
   
     - name: Restore Packages
-      run: nuget restore Flowframes.sln
+      run: nuget restore CodeLegacy\Flowframes.sln
 
     - name: Build solution
-      run: msbuild Flowframes.sln -t:rebuild -property:Configuration=Release
+      run: msbuild CodeLegacy\Flowframes.sln -t:rebuild -property:Configuration=Release
