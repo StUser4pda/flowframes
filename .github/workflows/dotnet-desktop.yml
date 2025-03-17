@@ -24,3 +24,6 @@ jobs:
 
     - name: Build solution
       run: msbuild CodeLegacy\Flowframes.sln -t:rebuild -property:Configuration=Release
+
+    - name: Upload log files
+      uses: actions/upload-artifact@v4
