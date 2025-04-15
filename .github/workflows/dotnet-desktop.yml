@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+      with:
+          ref: 2d136e53801cdd64b56b7ea00f3cb555f888f270
 
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v2
