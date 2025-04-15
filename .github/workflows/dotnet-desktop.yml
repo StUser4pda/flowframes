@@ -27,8 +27,11 @@ jobs:
     - name: Build solution
       run: msbuild CodeLegacy\Flowframes.sln -t:rebuild -property:Configuration=Release -property:Platform=x64
 
+    - name: Build solution (Console)
+      run: msbuild CodeLegacy\Flowframes.sln -t:rebuild -property:Configuration=ConsoleRelease -property:Platform=x64
+
     - name: Upload log files
       uses: actions/upload-artifact@v4
       with:
         name: Flowframes-CodeLegacy
-        path: .\CodeLegacy\bin\RelGui\
+        path: .\CodeLegacy\bin\
