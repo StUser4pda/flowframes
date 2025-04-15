@@ -23,7 +23,7 @@ jobs:
       run: nuget restore CodeLegacy\Flowframes.sln
 
     - name: Build solution
-      run: msbuild CodeLegacy\Flowframes.sln -t:rebuild -property:Configuration=Release
+      run: msbuild CodeLegacy\Flowframes.sln -t:rebuild -property:Configuration=Release;Platform=x64
 
     - name: Upload log files
       uses: actions/upload-artifact@v4
